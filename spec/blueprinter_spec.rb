@@ -1,3 +1,4 @@
+require 'spec_helper'
 require 'dry_serialization/blueprinter'
 
 describe 'Blueprinter#serialized_resource' do
