@@ -1,6 +1,6 @@
 require 'blueprinter'
 
-class DrySerialization::Blueprinter
+module DrySerialization::Blueprinter
 
   def serialized_resource(resource, blueprint, options = {})
     blueprint.render(resource, options)
