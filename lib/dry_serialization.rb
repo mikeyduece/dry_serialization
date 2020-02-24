@@ -1,6 +1,5 @@
 require "dry_serialization/version"
+require "dry_serialization/blueprinter/serializer_helper"
 
 module DrySerialization
-  class Error < StandardError; end
-  # Your code goes here...
 end
