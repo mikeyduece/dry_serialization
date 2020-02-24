@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   #spec.homepage      = 'TODO: Put your gem's website or public repo URL here.'
   spec.license       = 'MIT'
 
-  spec.add_dependency DrySerialization.configuration.serializer || :blueprinter
+  spec.add_dependency DrySerialization.configuration.serializer || 'blueprinter'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.

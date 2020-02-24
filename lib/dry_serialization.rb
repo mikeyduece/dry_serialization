@@ -13,7 +13,6 @@ module DrySerialization
   end
   
   def self.configure
-    require 'pry'; binding.pry
     yield(configuration)
   end
 end
