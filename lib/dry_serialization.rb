@@ -1,5 +1,5 @@
 require "dry_serialization/version"
-require "dry_serialization/blueprinter/serializer_helper"
+require "dry_serialization/blueprinter"
 
 module DrySerialization
 end

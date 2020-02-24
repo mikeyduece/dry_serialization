@@ -1,5 +1,5 @@
 require 'dry_serialization/blueprinter'
 
-describe DrySerialization::Blueprinter do
+describe 'Blueprinter#serialized_resource' do
   it { should respond_to?(:serialized_resource) }
 end
