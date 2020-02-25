@@ -1,5 +1,10 @@
 # DrySerialization
 
+![AppVeyor](https://img.shields.io/appveyor/build/mikeyduece/dry_serialization?style=plastic)
+![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/mikeyduece/dry_serialization?style=plastic)
+![GitHub issues](https://img.shields.io/github/issues-raw/mikeyduece/dry_serialization?style=plastic)
+<a href="https://patreon.com/mikeyduece"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.herokuapp.com%2Fmikeyduece%2Fpledgesssss&style=plastic" /> </a>
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dry_serialization`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
@@ -14,7 +19,7 @@ gem 'dry_serialization'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -22,7 +27,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+- Install with rails generator
+  * currently supported serializers are `:blueprinter`
+  
+
+    `rails g dry_serialization:<serializer_name>:install`
+    
+
+    
+    
 
 ## Development
 
@@ -32,7 +45,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dry_serialization.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mikeyduece/dry_serialization.
 
 ## License
 
