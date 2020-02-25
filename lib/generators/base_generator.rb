@@ -10,12 +10,15 @@ class BaseGenerator < Rails::Generators::Base
   private
 
   # Removes other serialization gems, currently just AMS and FastJsonapi
-  def remove_other_supported_gems
-    log_statement('ActiveModelSerializers', :yellow)
-    gsub_file('Gemfile', /^(\ngem 'active_model_serializers')/, '')
+  def remove_other_supported_gems(*gems)
+    gems = [gems] unless gems.is_a?(Array)
+    return if gems.empty?
     
-    log_statement('FastJsonapi', :yellow)
-    gsub_file('Gemfile', /^(\ngem 'fast_jsonapi')/, '')
+    gems.each do |gem|
+      log_statement(gem, :yellow)
+      gsub_file('Gemfile', /^(\ngem #{gem.underscore})/, '')
+    end
+    
   end
 
   # Adds an ApiController if one does not exist to ensure proper encapsulation,
@@ -27,7 +30,6 @@ class BaseGenerator < Rails::Generators::Base
       template 'api_controller.rb', API_CONTROLLER_PATH
     end
   end
-
 
   def log_statement(serializer, color = :green)
     puts set_color("Removed #{serializer}", color)

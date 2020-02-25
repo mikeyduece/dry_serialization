@@ -7,7 +7,7 @@ module DrySerialization
       
       # Add blueprinter gem to gemfile after dry_serialization declaration and bundles the newly declared gem
       def install_blueprinter
-        remove_other_supported_gems
+        remove_other_supported_gems('ActiveModelSerializers', 'FastJsonapi')
         puts 'Installing Blueprinter...'
         insert_into_file('Gemfile',
                          "\ngem 'blueprinter'",
