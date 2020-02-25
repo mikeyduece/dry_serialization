@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dry_serialization (0.2.1)
+    dry_serialization (0.2.2)
       blueprinter
 
 GEM

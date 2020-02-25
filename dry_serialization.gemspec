@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
       'public gem pushes.'
   end
 
-  spec.files = Dir['lib/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  spec.files = Dir['lib/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'Rakefile', 'README.md', 'dry_serialization.gemspec']
   
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
