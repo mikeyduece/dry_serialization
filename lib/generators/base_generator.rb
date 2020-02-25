@@ -10,7 +10,7 @@ class BaseGenerator < Rails::Generators::Base
     gems = [gems] unless gems.is_a?(Array)
     return if gems.empty?
     
-    puts set_color('Removing other supported gems', :orange)
+    puts set_color('Removing other supported gems', :yellow)
     gems.each do |gem|
       run "gem uninstall #{gem.underscore}"
       log_statement(gem)
