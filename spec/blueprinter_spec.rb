@@ -1,6 +1,11 @@
-require 'spec_helper'
+#require 'spec_helper'
 require 'dry_serialization/blueprinter'
 
-describe 'Blueprinter#serialized_resource' do
+RSpec.describe 'Blueprinter#serialized_resource' do
+  before(:all) do
+    DrySerialization.configure do |c|
+      c.serializer = :fast_jsonapi
+    end
+  end
   it { should respond_to?(:serialized_resource) }
 end
