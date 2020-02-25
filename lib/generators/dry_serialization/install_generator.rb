@@ -5,7 +5,7 @@ module DrySerialization
     source_root File.expand_path("../../templates", __FILE__)
     
     def copy_initializer
-      template 'dry_serialization.rb', 'config/intializers/dry_serialization.rb'
+      template 'dry_serialization.rb', 'config/initializers/dry_serialization.rb'
     end
   end
 end
