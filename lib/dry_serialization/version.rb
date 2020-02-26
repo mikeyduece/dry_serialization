@@ -1,3 +1,3 @@
 module DrySerialization
-  VERSION = "0.2.71"
+  VERSION = "0.2.8"
 end
