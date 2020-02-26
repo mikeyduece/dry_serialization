@@ -7,25 +7,17 @@ module DrySerialization
       
       # Add blueprinter gem to gemfile after dry_serialization declaration and bundles the newly declared gem
       def install_blueprinter
-        remove_other_supported_gems('ActiveModelSerializers', 'FastJsonapi')
-        puts 'Installing Blueprinter...'
+        remove_other_supported_gems(SERIALIZERS[:ams], 'FastJsonapi')
+        
+        puts "Installing #{SERIALIZERS[:blueprinter]}..."
         insert_into_file('Gemfile',
                          "\ngem 'blueprinter'",
                          after: "gem 'dry_serialization', source: 'https://gem.fury.io/mikeyduece-gems/'")
         run 'bundle install'
+        
+        helper_include(SERIALIZERS[:blueprinter])
       end
 
-
-      def helper_include
-        copy_api_controller
-        gsub_file(API_CONTROLLER_PATH, /^\t*(include DrySerialization::.*)\n/, '')
-        puts 'Adding include statement to ApiController'
-        insert_into_file(API_CONTROLLER_PATH,
-                         "\n\tinclude DrySerialization::Blueprinter",
-                         after: 'class ApiController < ActionController::API'
-        )
-      end
-     
     end
   end
 end

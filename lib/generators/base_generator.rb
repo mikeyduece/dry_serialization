@@ -2,6 +2,10 @@ require 'rails/generators/base'
 
 class BaseGenerator < Rails::Generators::Base
   API_CONTROLLER_PATH = 'app/controllers/api_controller.rb'.freeze
+  SERIALIZERS = {
+    ams: 'ActiveModelSerializers',
+    blueprinter: 'BluePrinter'
+  }
   
   def self.exit_on_failure?
     true
@@ -29,6 +33,16 @@ class BaseGenerator < Rails::Generators::Base
       puts set_color('ApiController not present, creating ApiController...', :cyan)
       template 'api_controller.rb', API_CONTROLLER_PATH
     end
+  end
+
+  def helper_include(serializer)
+    copy_api_controller
+    gsub_file(API_CONTROLLER_PATH, /^\t*(include DrySerialization::.*)\n/, '')
+    puts 'Adding include statement to ApiController'
+    insert_into_file(API_CONTROLLER_PATH,
+                     "\n\tinclude DrySerialization::#{serializer}",
+                     after: 'class ApiController < ActionController::API'
+    )
   end
 
   def log_statement(serializer, color = :green)
