@@ -3,10 +3,6 @@ require 'generator_spec'
 require 'generators/dry_serialization/ams/install_generator'
 
 RSpec.describe DrySerialization::Ams::InstallGenerator, type: :generator do
-  after(:each) do
-    FileUtils.rm_rf('app')
-  end
-  
   let(:file) { 'app/controllers/api_controller.rb' }
   
   it 'installs blueprinter' do
