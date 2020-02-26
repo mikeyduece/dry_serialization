@@ -35,9 +35,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.17'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.2'
+  spec.add_development_dependency 'rspec', '~> 3.7'
   spec.add_development_dependency 'factory_bot'
   spec.add_development_dependency 'generator_spec'
   spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'activerecord'
+  spec.add_development_dependency 'sqlite3', '~> 1.4'
+  spec.add_development_dependency 'yard', '~> 0.9.11'
+  spec.add_development_dependency 'active_model_serializers'
 end

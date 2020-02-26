@@ -1,16 +1,15 @@
-require 'active_model'
 require 'active_model_serializers'
 
-module DrySerialization::ActiveModelSerializers
+module DrySerialization::Ams
   
   def serialized_resource(resource, serializer, options = {})
     return nil if resource.nil?
 
     options[:serializer] = serializer
     if resource.is_a?(Array) || resource.is_a?(::ActiveRecord::Relation)
-      ActiveModel::Serializer::CollectionSerializer.new(resource, options)
+      ::ActiveModel::Serializer::CollectionSerializer.new(resource, options)
     else
-      ActiveModelSerializers::SerializableResource.new(resource, options)
+      ::ActiveModelSerializers::SerializableResource.new(resource, options)
     end
   end
 
