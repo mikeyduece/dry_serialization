@@ -1,8 +1,8 @@
 require 'spec_helper'
 require 'generator_spec'
-require 'generators/dry_serialization/blueprinter/install_generator'
+require 'generators/dry_serialization/ams/install_generator'
 
-RSpec.describe DrySerialization::Blueprinter::InstallGenerator, type: :generator do
+RSpec.describe DrySerialization::Ams::InstallGenerator, type: :generator do
   after(:each) do
     FileUtils.rm_rf('app')
   end
@@ -11,8 +11,8 @@ RSpec.describe DrySerialization::Blueprinter::InstallGenerator, type: :generator
   
   it 'installs blueprinter' do
     run_generator
+    
     expect(File.exists?('app/controllers/api_controller.rb')).to be(true)
-    expect(File.read(file)).to include('include DrySerialization::Blueprinter')
+    expect(File.read(file)).to include('include DrySerialization::ActiveModelSerializers')
   end
-  
 end
