@@ -4,7 +4,7 @@ class BaseGenerator < Rails::Generators::Base
   API_CONTROLLER_PATH = 'app/controllers/api_controller.rb'.freeze
   SERIALIZERS = {
     ams: 'ActiveModelSerializers',
-    blueprinter: 'BluePrinter'
+    blueprinter: 'Blueprinter'
   }
   
   def self.exit_on_failure?
