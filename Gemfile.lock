@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     dry_serialization (0.2.71)
-      active_model_serializers
 
 GEM
   remote: https://rubygems.org/

@@ -1,5 +1,3 @@
-require 'active_model_serializers'
-
 module DrySerialization::Ams
   
   def serialized_resource(resource, serializer, options = {})
