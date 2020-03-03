@@ -1,3 +1,6 @@
+require 'bundler/setup'
+Bundler.setup
+require 'dry_serialization'
 require 'factory_bot'
 require_relative 'activerecord_helper'
 

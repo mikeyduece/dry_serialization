@@ -1,6 +1,6 @@
 require 'active_record'
 require 'factories/model_factories.rb'
-require 'dry_serialization/ams'
+require 'dry_serialization/active_model_serializers'
 
 ActiveRecord::Base.establish_connection(
   adapter:  "sqlite3",
@@ -8,11 +8,9 @@ ActiveRecord::Base.establish_connection(
 )
 
 class User < ActiveRecord::Base
-
 end
 
 class TestCase < ActiveRecord::Base
-  include DrySerialization::Ams
 end
 
 ActiveRecord::Schema.define(version: 20181116094243) do

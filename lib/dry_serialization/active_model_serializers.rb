@@ -1,4 +1,5 @@
-module DrySerialization::Ams
+
+module DrySerialization::ActiveModelSerializers
   
   def serialized_resource(resource, serializer, options = {})
     return nil if resource.nil?
