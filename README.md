@@ -3,7 +3,6 @@
 ![AppVeyor](https://img.shields.io/appveyor/build/mikeyduece/dry_serialization?style=plastic)
 ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/mikeyduece/dry_serialization?style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues-raw/mikeyduece/dry_serialization?style=plastic)
-<a href="https://patreon.com/mikeyduece"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.herokuapp.com%2Fmikeyduece%2Fpledgesssss&style=plastic" /> </a>
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dry_serialization`. To experiment with that code, run `bin/console` for an interactive prompt.
 
