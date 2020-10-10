@@ -15,7 +15,7 @@ module DrySerialization
       private
       
       def handle_errors(*errors)
-        errors.each_with_object({}) { |error, acc| acc << { detail: error } }
+        errors.each_with_object([]) { |error, acc| acc << { detail: error } }
       end
 
     end
