@@ -7,9 +7,15 @@ module DrySerialization
 
       def error_response(errors, status = :unprocessable_entity)
         errors = [errors] unless errors.is_a?(Array)
-        errors = { errors: errors }
+        errors = handle_errors(errors)
 
         render json: errors, status: status
+      end
+      
+      private
+      
+      def handle_errors(*errors)
+        errors.each_with_object([]) { |error, acc| acc << { detail: error } }
       end
 
     end
