@@ -9,7 +9,7 @@ module DrySerialization
         errors = [errors] unless errors.is_a?(Array)
         errors = handle_errors(errors)
 
-        render json: errors, status: status
+        render json: { errors: errors }, status: status
       end
       
       private
