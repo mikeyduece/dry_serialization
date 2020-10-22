@@ -5,7 +5,7 @@ class BaseGenerator < Rails::Generators::Base
   SERIALIZERS = {
     ams: 'ActiveModelSerializers',
     blueprinter: 'Blueprinter',
-    fast_jsonapi: 'FastJsonapi'
+    fast_jsonapi: 'JsonapiSerializer'
   }
   
   def self.exit_on_failure?
@@ -14,7 +14,7 @@ class BaseGenerator < Rails::Generators::Base
   
   private
   
-  # Removes other serialization gems, currently just AMS and FastJsonapi
+  # Removes other serialization gems, currently just AMS and JsonapiSerializer
   def remove_other_supported_gems(*gems)
     gems = [gems] unless gems.is_a?(Array)
     return if gems.empty?

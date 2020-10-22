@@ -1,7 +1,7 @@
 require 'generators/base_generator'
 
 module DrySerialization
-  module FastJsonapi
+  module JsonapiSerializer
     class InstallGenerator < BaseGenerator
       source_root File.expand_path("../../../templates", __FILE__)
       
@@ -9,13 +9,13 @@ module DrySerialization
       def install_blueprinter
         remove_other_supported_gems(SERIALIZERS[:blueprinter], SERIALIZERS[:ams])
         
-        puts "Installing #{SERIALIZERS[:blueprinter]}..."
+        puts "Installing #{SERIALIZERS[:jsonapi_serializer]}..."
         insert_into_file('Gemfile',
-                         "\ngem 'fast_jsonapi'",
-                         after: "gem 'dry_serialization', source: 'https://gem.fury.io/mikeyduece-gems/'")
+                         "\ngem 'jsonapi_serializer'",
+                         after: "gem 'dry_serialization'")
         run 'bundle install'
         
-        helper_include(SERIALIZERS[:fast_jsonapi])
+        helper_include(SERIALIZERS[:jsonapi_serializer])
       end
     
     end
