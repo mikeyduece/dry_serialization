@@ -1,4 +1,4 @@
-module DrySerialization::FastJsonapi
+module DrySerialization::JsonapiSerializer
   
   def serialized_resource(resource, serializer, options = {})
     if resource.is_a?(ActiveRecord::Relation) || resource.is_a?(Array)

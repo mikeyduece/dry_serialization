@@ -1,13 +1,13 @@
 require 'spec_helper'
 require 'fast_jsonapi'
-require 'dry_serialization/fast_jsonapi'
+require 'dry_serialization/jsonapi_serializer'
 
-RSpec.describe 'FastJsonapi#serialized_resource' do
+RSpec.describe 'JsonapiSerializer#serialized_resource' do
   let(:user) { create(:user) }
   let(:users) { create_list(:user, 3) }
   
   class TestCase < ActiveRecord::Base
-    include DrySerialization::FastJsonapi
+    include DrySerialization::JsonapiSerializer
   end
   
   class UserSerializer

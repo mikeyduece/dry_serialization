@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'activerecord'
   spec.add_development_dependency 'sqlite3', '~> 1.4'
   spec.add_development_dependency 'yard', '~> 0.9.11'
-  spec.add_development_dependency 'fast_jsonapi'
+  spec.add_development_dependency 'jsonapi_serializer'
 end
