@@ -27,7 +27,7 @@ Or install it yourself as:
 ## Usage
 
 - Install with rails generator
-  * currently supported serializers are [JsonapiSerializer](https://github.com/jsonapi-serializer/jsonapi-serializer) and [Blueprinter](https://github.com/procore/blueprinter)
+  * currently supported serializers are [jsonapi_serializer](https://github.com/jsonapi-serializer/jsonapi-serializer) and [blueprinter](https://github.com/procore/blueprinter)
   
 
     `rails g dry_serialization:<serializer_name>:install`
