@@ -5,7 +5,7 @@ class BaseGenerator < Rails::Generators::Base
   SERIALIZERS = {
     ams: 'ActiveModelSerializers',
     blueprinter: 'Blueprinter',
-    fast_jsonapi: 'JsonapiSerializer'
+    jsonapi_serializer: 'JsonapiSerializer'
   }
   
   def self.exit_on_failure?

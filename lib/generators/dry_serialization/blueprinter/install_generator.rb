@@ -7,7 +7,7 @@ module DrySerialization
       
       # Add blueprinter gem to gemfile after dry_serialization declaration and bundles the newly declared gem
       def install_blueprinter
-        remove_other_supported_gems(SERIALIZERS[:ams], SERIALIZERS[:fast_jsonapi])
+        remove_other_supported_gems(SERIALIZERS[:ams], SERIALIZERS[:jsonapi_serializer])
         
         puts "Installing #{SERIALIZERS[:blueprinter]}..."
         insert_into_file('Gemfile',
