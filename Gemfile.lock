@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dry_serialization (0.4.3.3)
+    dry_serialization (0.4.4)
 
 GEM
   remote: https://rubygems.org/
@@ -38,13 +38,13 @@ GEM
     erubi (1.9.0)
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
-    fast_jsonapi (1.5)
-      activesupport (>= 4.2)
     generator_spec (0.9.4)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    jsonapi_serializer (0.1.1)
+      activesupport (>= 4.2)
     loofah (2.7.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -100,8 +100,8 @@ DEPENDENCIES
   bundler (~> 1.17)
   dry_serialization!
   factory_bot
-  fast_jsonapi
   generator_spec
+  jsonapi_serializer
   pry
   rake
   rspec (~> 3.7)
