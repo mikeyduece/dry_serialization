@@ -1,7 +1,6 @@
 # DrySerialization
 
-![AppVeyor](https://img.shields.io/appveyor/build/mikeyduece/dry_serialization?style=plastic)
-![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/mikeyduece/dry_serialization?style=plastic)
+[![Gem Version](https://badge.fury.io/rb/dry_serialization.svg)](https://badge.fury.io/rb/dry_serialization)
 ![GitHub issues](https://img.shields.io/github/issues-raw/mikeyduece/dry_serialization?style=plastic)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dry_serialization`. To experiment with that code, run `bin/console` for an interactive prompt.
