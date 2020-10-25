@@ -32,7 +32,27 @@ Or install it yourself as:
     `rails g dry_serialization:<serializer_name>:install`
     
 
+- This gem will assume you have an api controller, and create one if you do not. This is to further keep the api separate from the web controllers. 
+  - The inclusion of the module corresponding to your chosen serializer gem will give you access to `#serialized_resource`.
+    - The `#serialized_resource` method also takes an optional 'options' hash. For `jsonapi-serializer`, that can come in the form of the `include` hash and/or `meta` or any of the other options available through that gem. Please see their documentation for all options.
+    - Similarly for `blueprinter` it will also take an optional options hash. Again, please see the official documentation in their repo.
+  ```ruby
+  user = User.find(params[:id])
+  render json: serialized_resource(user, UserSerializer) # UserSerializer can be substituted with UserBlueprint if that is the gem you've chosen.
+  ```
+  
+- SerializationHelper
+  - This module provides success and error response helper methods. 
+  - In your controller you can use them like so:
+  ```ruby
+  def create
+    user = User.create(create_user_params)
+    return error_response(user.errors) unless user.errors.empty?
     
+    success_response(user, UserSerializer, :created)
+  end
+  ```
+  - Both methods take an optional argument for the status. You can either use the symbol representation or the number code.
     
 
 ## Development
