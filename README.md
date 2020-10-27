@@ -3,9 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/dry_serialization.svg)](https://badge.fury.io/rb/dry_serialization)
 ![GitHub issues](https://img.shields.io/github/issues-raw/mikeyduece/dry_serialization?style=plastic)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dry_serialization`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Simple gem to dry up your controllers and provide a uniform interface for serializing Ruby objects. It relys on you to select and install either the blueprinter or jsonapi-serializer gems as well as this one.
 
 ## Installation
 
@@ -32,10 +30,11 @@ Or install it yourself as:
     `rails g dry_serialization:<serializer_name>:install`
     
 
-- This gem will assume you have an api controller, and create one if you do not. This is to further keep the api separate from the web controllers. 
+- This generator will assume you have an api controller, and create one if you do not. This is to further keep the api separate from the web controllers. 
   - The inclusion of the module corresponding to your chosen serializer gem will give you access to `#serialized_resource`.
     - The `#serialized_resource` method also takes an optional 'options' hash. For `jsonapi-serializer`, that can come in the form of the `include` hash and/or `meta` or any of the other options available through that gem. Please see their documentation for all options.
     - Similarly for `blueprinter` it will also take an optional options hash. Again, please see the official documentation in their repo.
+- Conversly, if you choose to not use the install generator, you can simply add your desired serializer gem to the Gemfile and include the relevant modules where needed.
   ```ruby
   user = User.find(params[:id])
   render json: serialized_resource(user, UserSerializer) # UserSerializer can be substituted with UserBlueprint if that is the gem you've chosen.
